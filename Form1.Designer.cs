@@ -1,6 +1,6 @@
 ﻿namespace DataBase
 {
-    partial class Form1
+    partial class Main_Form
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -31,9 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Clients = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Employes = new System.Windows.Forms.TabPage();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button_register = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Clients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -62,6 +63,15 @@
             this.Clients.Text = "Clients";
             this.Clients.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(624, 368);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // Employes
             // 
             this.Employes.BackColor = System.Drawing.Color.White;
@@ -78,24 +88,26 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // dataGridView1
+            // button_register
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(624, 368);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.button_register.Location = new System.Drawing.Point(680, 360);
+            this.button_register.Name = "button_register";
+            this.button_register.Size = new System.Drawing.Size(108, 39);
+            this.button_register.TabIndex = 2;
+            this.button_register.Text = "Добавить";
+            this.button_register.UseVisualStyleBackColor = true;
+            this.button_register.Click += new System.EventHandler(this.button_register_Click);
             // 
-            // Form1
+            // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(965, 450);
+            this.Controls.Add(this.button_register);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
-            this.Text = "Menu";
+            this.Name = "Main_Form";
+            this.Text = "Главная форма";
             this.tabControl1.ResumeLayout(false);
             this.Clients.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -110,6 +122,7 @@
         private System.Windows.Forms.TabPage Employes;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button_register;
     }
 }
 
