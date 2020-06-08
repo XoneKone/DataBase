@@ -70,7 +70,6 @@
             this.изменитьToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(146, 48);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // показатьВсеToolStripMenuItem
             // 
@@ -92,6 +91,7 @@
             this.change_client_button.TabIndex = 3;
             this.change_client_button.Text = "Изменить выбранные";
             this.change_client_button.UseVisualStyleBackColor = true;
+            this.change_client_button.Click += new System.EventHandler(this.change_client_button_Click);
             // 
             // delete_client_button
             // 
@@ -218,8 +218,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Main_Form";
             this.Text = "Главная форма";
-            this.TopMost = true;
-            this.Load += new System.EventHandler(this.Main_Form_Load);
+            this.Enter += new System.EventHandler(this.Main_Form_Enter);
             this.contextMenuStrip1.ResumeLayout(false);
             this.Clients.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Clients_base)).EndInit();

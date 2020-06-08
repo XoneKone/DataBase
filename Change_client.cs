@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace DataBase
 {
-    public partial class Register_emp : Form
+    public partial class Change_client : Form
     {
-        public Register_emp()
+        public Change_client()
         {
             InitializeComponent();
         }
 
-        private void Reg_client_button_Click(object sender, EventArgs e)
+        private void Change_client_button_Click(object sender, EventArgs e)
         {
-            DB db = new DB();
-            string name;
-            db.openConnection();
+
         }
     }
 }
