@@ -23,26 +23,27 @@ namespace DataBase
                 "employes.EMPLOYEE_NAME 'Контрактер',type_loan.LOAN_NAME 'Вид займа',client.DATA_AGR 'Дата заключения договора',client.WAGES 'Зарплата'" +
                 " FROM `client` INNER JOIN `employes`  ON client.CONTRACTER = employes.EMPLOYEE_ID INNER JOIN `type_loan` ON client.TYPE_LOAN = type_loan.LOAN_ID";
 
-            dataGridView1.AllowUserToAddRows = false;
+            Clients_base.AllowUserToAddRows = false;
             dB.openConnection();
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql,dB.getConnection());
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
+                Clients_base.DataSource = ds.Tables[0];
             dB.closeConnection();
-            dataGridView1.Columns[1].Width = 250;
-            dataGridView1.Columns[3].Width = 50;
-            dataGridView1.Columns[4].Width = 150;
-            dataGridView1.Columns[5].Width = 250;
-            dataGridView1.Columns[6].Width = 200;
-            dataGridView1.Columns[7].Width = 200;
-            dataGridView1.Columns[7].ContextMenuStrip = contextMenuStrip1;
+            Clients_base.Columns[1].Width = 250;
+            Clients_base.Columns[3].Width = 50;
+            Clients_base.Columns[4].Width = 150;
+            Clients_base.Columns[5].Width = 250;
+            Clients_base.Columns[6].Width = 200;
+            Clients_base.Columns[7].Width = 200;
+            Check.
+         
         }
           
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("HELLO!");
+            
         }
 
         private void button_register_Click(object sender, EventArgs e)
@@ -52,6 +53,11 @@ namespace DataBase
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void Main_Form_Load(object sender, EventArgs e)
         {
 
         }

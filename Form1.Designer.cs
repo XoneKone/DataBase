@@ -29,95 +29,39 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Clients = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Employes = new System.Windows.Forms.TabPage();
-            this.button_register = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.register_client_button = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.показатьВсеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1.SuspendLayout();
-            this.Clients.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.Employes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.change_client_button = new System.Windows.Forms.Button();
+            this.delete_client_button = new System.Windows.Forms.Button();
+            this.Clients = new System.Windows.Forms.TabPage();
+            this.Clients_base = new System.Windows.Forms.DataGridView();
+            this.Check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Employes = new System.Windows.Forms.TabPage();
+            this.delete_emp_button = new System.Windows.Forms.Button();
+            this.Employes_base = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.register_emp_button = new System.Windows.Forms.Button();
+            this.change_emp_button = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
+            this.Clients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Clients_base)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.Employes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Employes_base)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // register_client_button
             // 
-            this.tabControl1.Controls.Add(this.Clients);
-            this.tabControl1.Controls.Add(this.Employes);
-            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1097, 476);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // Clients
-            // 
-            this.Clients.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Clients.Controls.Add(this.dataGridView1);
-            this.Clients.Location = new System.Drawing.Point(4, 28);
-            this.Clients.Name = "Clients";
-            this.Clients.Padding = new System.Windows.Forms.Padding(3);
-            this.Clients.Size = new System.Drawing.Size(1089, 444);
-            this.Clients.TabIndex = 0;
-            this.Clients.Text = "Clients";
-            this.Clients.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Check});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1086, 441);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Employes
-            // 
-            this.Employes.BackColor = System.Drawing.Color.White;
-            this.Employes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Employes.Controls.Add(this.dataGridView2);
-            this.Employes.Location = new System.Drawing.Point(4, 28);
-            this.Employes.Name = "Employes";
-            this.Employes.Padding = new System.Windows.Forms.Padding(3);
-            this.Employes.Size = new System.Drawing.Size(1089, 444);
-            this.Employes.TabIndex = 1;
-            this.Employes.Text = "Employes";
-            // 
-            // button_register
-            // 
-            this.button_register.Location = new System.Drawing.Point(1120, 423);
-            this.button_register.Name = "button_register";
-            this.button_register.Size = new System.Drawing.Size(108, 39);
-            this.button_register.TabIndex = 2;
-            this.button_register.Text = "Добавить";
-            this.button_register.UseVisualStyleBackColor = true;
-            this.button_register.Click += new System.EventHandler(this.button_register_Click);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(-6, -2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1093, 444);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // Check
-            // 
-            this.Check.Frozen = true;
-            this.Check.HeaderText = "";
-            this.Check.Name = "Check";
-            this.Check.Width = 20;
+            this.register_client_button.Location = new System.Drawing.Point(739, 133);
+            this.register_client_button.Name = "register_client_button";
+            this.register_client_button.Size = new System.Drawing.Size(375, 55);
+            this.register_client_button.TabIndex = 2;
+            this.register_client_button.Text = "Добавить";
+            this.register_client_button.UseVisualStyleBackColor = true;
+            this.register_client_button.Click += new System.EventHandler(this.button_register_Click);
             // 
             // contextMenuStrip1
             // 
@@ -140,38 +84,169 @@
             this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.изменитьToolStripMenuItem.Text = "Изменить";
             // 
+            // change_client_button
+            // 
+            this.change_client_button.Location = new System.Drawing.Point(739, 76);
+            this.change_client_button.Name = "change_client_button";
+            this.change_client_button.Size = new System.Drawing.Size(375, 51);
+            this.change_client_button.TabIndex = 3;
+            this.change_client_button.Text = "Изменить выбранные";
+            this.change_client_button.UseVisualStyleBackColor = true;
+            // 
+            // delete_client_button
+            // 
+            this.delete_client_button.Location = new System.Drawing.Point(739, 16);
+            this.delete_client_button.Name = "delete_client_button";
+            this.delete_client_button.Size = new System.Drawing.Size(375, 54);
+            this.delete_client_button.TabIndex = 4;
+            this.delete_client_button.Text = "Удалить выбранные";
+            this.delete_client_button.UseVisualStyleBackColor = true;
+            // 
+            // Clients
+            // 
+            this.Clients.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Clients.Controls.Add(this.delete_client_button);
+            this.Clients.Controls.Add(this.Clients_base);
+            this.Clients.Controls.Add(this.register_client_button);
+            this.Clients.Controls.Add(this.change_client_button);
+            this.Clients.Location = new System.Drawing.Point(4, 28);
+            this.Clients.Name = "Clients";
+            this.Clients.Padding = new System.Windows.Forms.Padding(3);
+            this.Clients.Size = new System.Drawing.Size(1124, 446);
+            this.Clients.TabIndex = 0;
+            this.Clients.Text = "Клиенты";
+            this.Clients.UseVisualStyleBackColor = true;
+            // 
+            // Clients_base
+            // 
+            this.Clients_base.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Clients_base.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.Clients_base.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Clients_base.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Check});
+            this.Clients_base.Location = new System.Drawing.Point(1, 1);
+            this.Clients_base.Name = "Clients_base";
+            this.Clients_base.Size = new System.Drawing.Size(732, 440);
+            this.Clients_base.TabIndex = 0;
+            this.Clients_base.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Check
+            // 
+            this.Check.Frozen = true;
+            this.Check.HeaderText = "";
+            this.Check.Name = "Check";
+            this.Check.Width = 20;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.Clients);
+            this.tabControl1.Controls.Add(this.Employes);
+            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1132, 478);
+            this.tabControl1.TabIndex = 1;
+            // 
+            // Employes
+            // 
+            this.Employes.BackColor = System.Drawing.Color.White;
+            this.Employes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Employes.Controls.Add(this.delete_emp_button);
+            this.Employes.Controls.Add(this.Employes_base);
+            this.Employes.Controls.Add(this.register_emp_button);
+            this.Employes.Controls.Add(this.change_emp_button);
+            this.Employes.Location = new System.Drawing.Point(4, 28);
+            this.Employes.Name = "Employes";
+            this.Employes.Padding = new System.Windows.Forms.Padding(3);
+            this.Employes.Size = new System.Drawing.Size(1124, 446);
+            this.Employes.TabIndex = 1;
+            this.Employes.Text = "Работники МФО";
+            // 
+            // delete_emp_button
+            // 
+            this.delete_emp_button.Location = new System.Drawing.Point(742, 16);
+            this.delete_emp_button.Name = "delete_emp_button";
+            this.delete_emp_button.Size = new System.Drawing.Size(375, 54);
+            this.delete_emp_button.TabIndex = 8;
+            this.delete_emp_button.Text = "Удалить выбранные";
+            this.delete_emp_button.UseVisualStyleBackColor = true;
+            // 
+            // Employes_base
+            // 
+            this.Employes_base.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Employes_base.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.Employes_base.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Employes_base.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewCheckBoxColumn1});
+            this.Employes_base.Location = new System.Drawing.Point(4, 1);
+            this.Employes_base.Name = "Employes_base";
+            this.Employes_base.Size = new System.Drawing.Size(732, 440);
+            this.Employes_base.TabIndex = 5;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.Frozen = true;
+            this.dataGridViewCheckBoxColumn1.HeaderText = "";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.Width = 20;
+            // 
+            // register_emp_button
+            // 
+            this.register_emp_button.Location = new System.Drawing.Point(742, 133);
+            this.register_emp_button.Name = "register_emp_button";
+            this.register_emp_button.Size = new System.Drawing.Size(375, 55);
+            this.register_emp_button.TabIndex = 6;
+            this.register_emp_button.Text = "Добавить";
+            this.register_emp_button.UseVisualStyleBackColor = true;
+            // 
+            // change_emp_button
+            // 
+            this.change_emp_button.Location = new System.Drawing.Point(742, 76);
+            this.change_emp_button.Name = "change_emp_button";
+            this.change_emp_button.Size = new System.Drawing.Size(375, 51);
+            this.change_emp_button.TabIndex = 7;
+            this.change_emp_button.Text = "Изменить выбранные";
+            this.change_emp_button.UseVisualStyleBackColor = true;
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1266, 488);
-            this.Controls.Add(this.button_register);
+            this.ClientSize = new System.Drawing.Size(1156, 563);
             this.Controls.Add(this.tabControl1);
             this.Name = "Main_Form";
             this.Text = "Главная форма";
-            this.tabControl1.ResumeLayout(false);
-            this.Clients.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.Employes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.Main_Form_Load);
             this.contextMenuStrip1.ResumeLayout(false);
+            this.Clients.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Clients_base)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.Employes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Employes_base)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage Clients;
-        private System.Windows.Forms.TabPage Employes;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button_register;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Check;
+        private System.Windows.Forms.Button register_client_button;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem показатьВсеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
+        private System.Windows.Forms.Button change_client_button;
+        private System.Windows.Forms.Button delete_client_button;
+        private System.Windows.Forms.TabPage Clients;
+        private System.Windows.Forms.DataGridView Clients_base;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Check;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage Employes;
+        private System.Windows.Forms.Button delete_emp_button;
+        private System.Windows.Forms.DataGridView Employes_base;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Button register_emp_button;
+        private System.Windows.Forms.Button change_emp_button;
     }
 }
 
