@@ -11,12 +11,20 @@ using System.Windows.Forms;
 
 namespace DataBase
 {
-    public partial class Register_emp : Form
+    public partial class Change_employee : Form
     {
-        public Register_emp()
+        private List<string> str;
+
+        public Change_employee()
+        {
+            InitializeComponent();
+        }
+
+        public Change_employee(List<string> str)
         {
             InitializeComponent();
 
+            this.str = str;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
 
@@ -34,11 +42,21 @@ namespace DataBase
                 }
             }
             reader.Close();
+
+            FIO_employee.Text = str[1];
+            dateTimePicker1.Text = str[2];
+            gender_employee.Text = str[3];
+            Mob_phone_employee.Text = str[4];
+            Adress_employee.Text = str[5];
+            Position_richtextbox.Text = str[6];
+            wages_employee.Text = str[7];
+            Workplace.Text = str[8];
         }
 
-        private void Reg_client_button_Click(object sender, EventArgs e)
+        private void Change_employee_button_Click(object sender, EventArgs e)
         {
             DB dB = new DB();
+            int id = int.Parse(str[0]);
             string name = FIO_employee.Text;
             string birthdate = dateTimePicker1.Text;
             string gender = gender_employee.Text;
@@ -61,7 +79,9 @@ namespace DataBase
                 }
             }
             reader.Close();
-            command.CommandText = "INSERT INTO `employes` (`EMPLOYEE_ID`, `EMPLOYEE_NAME`, `BIRTHDATE`, `GENDER`, `MOBILE_PHONE`, `ADDRESS`, `POSITION`, `WAGES`, `WORKPLACE`) VALUES (NULL, @name, @bd, @gend, @mobphone, @adress, @pos, @wages, @workplace)";
+            command.CommandText = "UPDATE `employes` SET `EMPLOYEE_NAME` = @name, `BIRTHDATE` = @bd, `GENDER` = @gend," +
+                " `MOBILE_PHONE` = @mobphone, `ADDRESS` = @adress, `POSITION` = @pos, `WAGES` = @wages," +
+                " `WORKPLACE` = @workplace WHERE `employes`.`EMPLOYEE_ID` = @id ";
             command.Parameters.Add("@name", MySqlDbType.VarChar).Value = name;
             command.Parameters.Add("@bd", MySqlDbType.Date).Value = birthdate;
             command.Parameters.Add("@gend", MySqlDbType.VarChar).Value = gender;
@@ -70,9 +90,10 @@ namespace DataBase
             command.Parameters.Add("@pos", MySqlDbType.VarChar).Value = position;
             command.Parameters.Add("@wages", MySqlDbType.Int32).Value = wages;
             command.Parameters.Add("@workplace", MySqlDbType.Int32).Value = workplace;
+            command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
             if (command.ExecuteNonQuery() == 1)
             {
-                MessageBox.Show("Клиент добавлен в базу!");
+                MessageBox.Show("Изменения внесены в базу!");
                 this.Close();
 
             }

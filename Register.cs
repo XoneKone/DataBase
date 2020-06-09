@@ -16,6 +16,7 @@ namespace DataBase
         public Register_сlient()
         {
             InitializeComponent();
+            
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
@@ -98,13 +99,13 @@ namespace DataBase
             command.Parameters.Add("@wages", MySqlDbType.Int32).Value = wages;
             if (command.ExecuteNonQuery() == 1)
             {
-                MessageBox.Show("Клиент добавлен!");
+                MessageBox.Show("Клиент добавлен в базу!");
+                this.Close();
+
             }
             else MessageBox.Show("Произошла ошибка!");
             dB.closeConnection();
         }
-
-       
-        
+    
     }
 }
